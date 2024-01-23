@@ -16,6 +16,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link a href="style.css" rel="stylesheet"/>
     </head>
 
     <body>
@@ -24,34 +25,34 @@
         <div class="row">
             <div class="col-md-6">
                 <!-- input for bill amount -->
-                <label for="totalBill" class="form-label">Total Bill</label>
-                <input type="text" class="form-control" id="totalBill" placeholder="Enter total bill" /> 
+                <label for="totalBill" class="form-label text-white">Total Bill</label>
+                <input type="text" class="form-control text-white bg-secondary" id="totalBill" placeholder="Enter total bill" /> 
             </div>
             <div class="col-md-6">
                 <!-- input for number of people -->
-                <label for="numOfPeople" class="form-label">Number of People</label>
-                <input type="text" class="form-control" id="numOfPeople" placeholder="Enter number of people" /> 
+                <label for="numOfPeople" class="form-label text-white">Number of People</label>
+                <input type="text" class="form-control bg-secondary" id="numOfPeople" placeholder="Enter number of people" /> 
             </div>
         </div>
         <div class="row mt-3">
             <div class="col md-6">
                 <!-- dropdown for service quality -->
-                <label for="serviceQuality" class="form-label">Service Quality:</label>
-                <select class="form-select">
-                    <option value="Great">Great</option>
-                    <option value="Good">Good</option>
-                    <option value="Poor">Poor</option>
+                <label for="serviceQuality" class="form-label text-white">Service Quality:</label>
+                <select class="form-select text-white bg-dark">
+                    <option class="text-white" value="Great">Great</option>
+                    <option class="text-white" value="Good">Good</option>
+                    <option class="text-white" value="Poor">Poor</option>
                 </select>
             </div>
             <div class="col-md-6 mt-4">
                 <!-- button to trigger calculation -->
-                <button class="btn btn-danger" onclick="calculateAndDisplay()">Calculate</button>
+                <button class="btn btn-dark" onclick="calculateAndDisplay()">Calculate</button>
             </div>
         </div>
         <div class="row mt-4">
             <div class="col-md-12">
                 <!-- results from section -->
-                <h4>Results:</h4>
+                <h4 class="text-white">Results:</h4>
                 <p id="tipResult"></p>
                 <p id="totalBillResult"></p>
                 <p id="amtPerPersonResult"></p>
