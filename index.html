@@ -1,106 +1,78 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Tip Calculator App</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link a href="style.css" rel="stylesheet"/>
-    </head>
+<head>
+    <title>Tip Calculator Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body>
-    
-       <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <!-- input for bill amount -->
-                <label for="totalBill" class="form-label text-white">Total Bill</label>
-                <input type="text" class="form-control text-white bg-secondary" id="totalBill" placeholder="Enter total bill" /> 
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- User Input Total Bill Amount -->
+                    <label for="totalBill" class="form-label">Total Bill:</label>
+                    <input type="text" class="form-control bg-secondary text-white" id="totalBill" placeholder="Enter total bill amount">
+                </div>
+                <div class="col-md-6">
+                    <!-- User Input Total number of Ppl -->
+                    <label for="numOfPeople" class="form-label">Number of People:</label>
+                    <input type="text" class="form-control bg-secondary text-white" id="numOfPeople" placeholder="Enter number of people">
+                </div>
             </div>
-            <div class="col-md-6">
-                <!-- input for number of people -->
-                <label for="numOfPeople" class="form-label text-white">Number of People</label>
-                <input type="text" class="form-control bg-secondary" id="numOfPeople" placeholder="Enter number of people" /> 
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <!-- Dropdown for Service Quality-->
+                    <label for="serviceQuality" class="form-label">Service Quality:</label>
+                    <select  id="serviceQuality" class="form-select bg-secondary text-white">
+                        <option value="Great">Great</option>
+                        <option value="Good">Good</option>
+                        <option value="Poor">Poor</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <!-- Button to run trigger the calculation-->
+                    <button class="btn btn-light" onclick="calculateAndDisplay()">Calculate Tip</button>
+                </div>
+            </div>
+             <div class="row mt-4">
+                <div class="col-md-12">
+                    <!-- Results Section -->
+                    <h4>Results:</h4>
+                    <p id="tipResult"></p>
+                    <p id="totalBillResult"></p>
+                    <p id="amtPerPersonResult"></p>
+                </div>
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="col md-6">
-                <!-- dropdown for service quality -->
-                <label for="serviceQuality" class="form-label text-white">Service Quality:</label>
-                <select class="form-select text-white bg-dark">
-                    <option class="text-white" value="Great">Great</option>
-                    <option class="text-white" value="Good">Good</option>
-                    <option class="text-white" value="Poor">Poor</option>
-                </select>
-            </div>
-            <div class="col-md-6 mt-4">
-                <!-- button to trigger calculation -->
-                <button class="btn btn-dark" onclick="calculateAndDisplay()">Calculate</button>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <!-- results from section -->
-                <h4 class="text-white">Results:</h4>
-                <p id="tipResult"></p>
-                <p id="totalBillResult"></p>
-                <p id="amtPerPersonResult"></p>
-            </div>
-        </div>
-       </div>
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
